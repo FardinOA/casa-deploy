@@ -2,7 +2,7 @@ import { vitePlugin as remix } from "@remix-run/dev";
 import { defineConfig } from "vite";
 import tsconfigPaths from "vite-tsconfig-paths";
 import { defineAppRoutes } from "./app/utils/routes";
-// import { vercelPreset } from "@vercel/remix/vite";
+import { vercelPreset } from "@vercel/remix/vite";
 declare module "@remix-run/node" {
     interface Future {
         v3_singleFetch: true;
@@ -20,7 +20,7 @@ export default defineConfig({
                 v3_lazyRouteDiscovery: true,
             },
             routes: defineAppRoutes,
-            // presets: [vercelPreset()],
+            presets: [vercelPreset()],
         }),
         tsconfigPaths(),
     ],
