@@ -1,5 +1,10 @@
 {
     "buildCommand": "npm run build",
     "outputDirectory": "build",
-    "routes": [{ "src": "/(.*)", "dest": "/index.js" }]
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "./build/server/nodejs-eyJydW50aW1lIjoibm9kZWpzIn0/index.js"
+        }
+    ]
 }
